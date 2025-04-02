@@ -2,25 +2,233 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hands Holding LLC</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* Main content styles */
+        main {
+            margin-top: 6rem;
+            padding: 3rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #7f8c8d;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            padding: 2rem;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            color: #7f8c8d;
+        }
+
+        .about {
+            background-color: #fff;
+            padding: 4rem 0;
+            margin: 4rem 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .contact p {
+            margin-bottom: 1.5rem;
+            color: #7f8c8d;
+        }
+
+        .contact-info {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #2c3e50;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-info:hover {
+            background-color: #1a252f;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body class="bg-light text-center d-flex flex-column justify-content-center" style="min-height: 100vh;">
-    <div class="container">
-        <h1 class="display-4 mt-5">Hands Holding LLC</h1>
-        <p class="lead mt-3">A private holding company with a long-term vision.</p>
-        <hr>
-        <section class="my-4">
-            <h2>Our Mission</h2>
-            <p>We invest in businesses and assets with patience, integrity, and a steady hand.</p>
-        </section>
-        <section class="my-4">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:info@handsholding.com">info@handsholding.com</a></p>
-        </section>
-        <footer class="text-muted mt-5 mb-3">
-            &copy; 2025 Hands Holding LLC. All rights reserved.
-        </footer>
-    </div>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Hands Holding LLC</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>Building Stronger Futures Together</h2>
+                <p>Hands Holding LLC is a strategic investment and management company dedicated to acquiring, developing, and nurturing businesses with strong growth potential.</p>
+            </section>
+
+            <section class="services">
+                <div class="service-card">
+                    <h3>Investment Strategy</h3>
+                    <p>We identify opportunities across diverse industries, focusing on companies with solid fundamentals and growth potential. Our patient capital approach allows businesses to flourish naturally.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Portfolio Management</h3>
+                    <p>Our experienced team provides comprehensive management services to ensure each asset in our portfolio receives the attention and expertise needed to maximize value.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Business Development</h3>
+                    <p>We work closely with our portfolio companies to implement strategic initiatives, operational improvements, and market expansion plans to drive sustainable growth.</p>
+                </div>
+            </section>
+
+            <section class="about">
+                <h2>About Hands Holding LLC</h2>
+                <p>Founded with a vision to support promising businesses, Hands Holding LLC represents the culmination of decades of experience in investment, management, and business development. We believe in building lasting relationships with our portfolio companies based on trust, transparency, and mutual growth objectives.</p>
+                <br>
+                <p>Our team brings together diverse expertise across finance, operations, technology, and marketing to provide comprehensive support to the businesses we invest in. We don't just provide capital – we become partners in your journey towards success.</p>
+            </section>
+
+            <section class="contact">
+                <h2>Connect With Us</h2>
+                <p>Interested in learning more about Hands Holding LLC or discussing potential opportunities?</p>
+                <a href="mailto:contact@handsholding.com" class="contact-info">contact@handsholding.com</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hands Holding LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
